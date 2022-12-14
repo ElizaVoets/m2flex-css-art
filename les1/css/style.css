@@ -1,0 +1,93 @@
+/*
+Notes for self:
+- without 'display: flex;', justify-content and align-items do not work
+- with things like clip-path, the first number is left/right and second number is up/down.
+- wanneer een element als 'absolute' gepositioneerd is, gaat hij altijd uit van de body
+  tenzij de parent waar dat element in staat als 'relative' gepositioneerd is
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #32325b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Pacifico', cursive;
+    font-size: 16px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.post-it{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 100%, 0% 100%);
+    transition: 2s all;
+    transform-origin: top left;
+    flex-shrink: 0;
+}
+
+.post-it:hover{
+    transform: rotate(15deg);
+    transition: .5s all;
+}
+
+.one{
+    background: #f8caea;
+}
+
+.one > div{
+    background: #c684a9;
+}
+
+.two{
+    background: #c8ecf7;
+}
+
+.two > div{
+    background: #7baab8;
+}
+
+.three{
+    background: #f7f0c3;
+}
+
+.three > div{
+    background: #bdb57e;
+}
+
+.one > div, .two > div, .three > div{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+}
+
+.post-it-text{
+    font-size: 250%;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1200px){
+    .post-it:hover{
+        transform: none;
+    }
+    .prikbord{
+        width: 0;
+        height: 0;
+    }
+}
