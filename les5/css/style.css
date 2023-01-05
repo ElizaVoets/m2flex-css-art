@@ -33,29 +33,73 @@ body{
     box-shadow: inset 0px 0px 25px 1px rgba(152, 43, 29, 0.4);
 }
 
-.heart{
-    position: absolute;
-    transform: rotate(45deg);
+.cat{
+    position: relative;
     top: 35%;
-    left: 50%;
+    left: 25%;
 }
 
 .block{
-    width: 120px;
-    height: 120px;
     position: absolute;
     background: var(--heart-color);
 }
 
-
-.block--second{
-    transform: translateX(-50%);
+.block--first{
+    width: 200px;
+    height: 140px;
     border-radius: 50%;
 }
 
+.block--second{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    rotate: 15deg;
+    left: 2%;
+    transform: translateY(-10%);
+}
+
 .block--third{
-    transform: translateY(-50%);
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    rotate: -15deg;
+    left: 29.3%;
+    transform: translateY(-10%);
+}
+
+
+
+.block--fourth{
+    position: absolute;
+    width: 25px;
+    height: 15px;
+    left: 22.5%;
+    transform: translateY(450%);
+    background: var(--base-color);
+    clip-path: polygon(0% 0%, 0% 50% , 40% 100%, 60% 100%, 100% 50%, 100% 0);
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+}
+
+.circle--one{
+    position: absolute;
+    width: 35px;
+    height: 21px;
+    background: linear-gradient(var(--base-color), 80%, var(--dark-base-color));
     border-radius: 50%;
+    left: 9%;
+    transform: translateY(200%);
+}
+
+.circle--two{
+    position: absolute;
+    width: 35px;
+    height: 21px;
+    background: linear-gradient(var(--base-color), 80%, var(--dark-base-color));
+    border-radius: 50%;
+    left: 33%;
+    transform: translateY(200%);
 }
 
 .shadow{
