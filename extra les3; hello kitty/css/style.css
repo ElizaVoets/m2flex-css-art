@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #EA8CB7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hellokitty{
+    position: relative;
+}
+
+.hellokitty__head{
+    position: relative;
+    width: 450px;
+    height: 360px;
+    background: white;
+    border-radius: 50%;
+    border: 15px solid black;
+}
+
+.hellokitty__eye{
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    top: 50%;
+}
+
+.hellokitty__eye--left{
+    left: 22%;
+}
+
+.hellokitty__eye--right{
+    right: 22%;
+}
+
+.hellokitty__nose{
+    position: absolute;
+    background: yellow;
+    border: 8px solid black;
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;
+
+    top: 67%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hellokitty__ear{
+    position: absolute;
+    top: -12%;
+    
+    width: 170px;
+    height: 300px;
+    background: white;
+    border: 15px solid black;
+    border-radius: 50%;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 33%, 0% 37% );
+}
+
+.hellokitty__ear--left{
+    left: 7%;
+    animation-name: ears--left;
+
+}
+
+.hellokitty__ear--right{
+    right: 7%;
+    animation-name: ears--right;
+}
+
+.hellokitty__bowtie{
+    position: absolute;
+    top: -5%;
+    right: 25%;
+    transform: rotate(25deg) scale(1.2);
+}
+
+.hellokitty__bowtieCircle{
+    position: absolute;
+    z-index: 1;
+
+    width: 60px;
+    height: 60px;
+
+    background: #E60E63;
+    border-radius: 50%;
+    border: 10px solid black;
+}
+
+.hellokitty__bowtieOval{
+    position: absolute;
+
+    width: 80px;
+    height: 100px;
+    background: #E60E63;
+    border-radius: 50%;
+    border: 10px solid black;
+
+    top: -20px;
+    
+}
+
+.hellokitty__bowtieOval--left{
+    left: -50px;
+}
+
+.hellokitty__bowtieOval--right{
+    right: -110px;
+}
+
+.hellokitty__bowtieInnerOval{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+
+    top: 30%;
+    border-radius: 50%;
+    background: #E60E63;
+    border: 10px solid black;
+}
+
+.hellokitty__bowtieInnerOval--left{
+    right: 0;
+}
+
+.hellokitty__bowtieInnerOval--right{
+    left: 0;
+}
+
+.hellokitty__whisker{
+    position: absolute;
+    height: 30px;
+    width: 90px;
+    border: 10px solid transparent;
+    border-top: 10px solid black;
+    border-radius: 50%;
+
+    z-index: 2;
+}
+
+.hellokitty__whisker--leftOne{
+    top: 50%;
+    left: -10%;
+    transform: rotate(-10deg);
+}
+
+.hellokitty__whisker--leftTwo{
+    top: 65%;
+    left: -7%;
+    transform: rotate(-20deg);
+}
+
+.hellokitty__whisker--leftThree{
+    top: 78%;
+    left: 1%;
+    transform: rotate(-35deg);
+}
+
+.hellokitty__whisker--rightOne{
+    top: 50%;
+    right: -10%;
+    transform: rotate(10deg);
+}
+
+.hellokitty__whisker--rightTwo{
+    top: 65%;
+    right: -7%;
+    transform: rotate(20deg);
+}
+
+.hellokitty__whisker--rightThree{
+    top: 78%;
+    right: 1%;
+    transform: rotate(35deg);
+}
+
+@keyframes ears--left {
+    from{
+        transform: rotate(-35deg);
+    }
+    to{
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes ears--right {
+    from{
+        transform: rotate(35deg);
+    }
+    to{
+        transform: rotate(30deg);
+    }
+}
