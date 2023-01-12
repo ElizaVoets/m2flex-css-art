@@ -68,18 +68,20 @@ body{
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 33%, 0% 37% );
+
 }
 
 .hellokitty__ear--left{
     left: 7%;
     animation-name: ears--left;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 33%, 0% 37% );
 
 }
 
 .hellokitty__ear--right{
     right: 7%;
     animation-name: ears--right;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 37%, 0% 33% );
 }
 
 .hellokitty__bowtie{
